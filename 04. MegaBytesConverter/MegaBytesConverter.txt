@@ -1,0 +1,18 @@
+package project;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        printMegaBytesAndKiloBytes(23456);
+                    
+    }
+    public static void printMegaBytesAndKiloBytes(long kiloBytes) {
+        if(kiloBytes < 0) {
+            System.out.println("Invalid Value");
+       } else {
+            long megaBytes = (kiloBytes / 1024);
+            long remainder = (kiloBytes%1024);
+            System.out.println(kiloBytes + " KB = " + megaBytes + " MB and " + remainder + " KB");
+       }
+    }   
+}

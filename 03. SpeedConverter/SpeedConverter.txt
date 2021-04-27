@@ -1,0 +1,28 @@
+package project;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        double myResult = toMilesPerHour(3.3453456575);
+        double myActualresult = printConversion(myResult);
+        System.out.println(myActualResult);
+       }
+    
+    public static double toMilesPerHour(double kilometersPerHour) {
+        if(kilometersPerHour < 0) {
+            return -1;
+        } else {
+            return Math.round(kilometersPerHour * 1.609);
+        }
+    }
+    
+    public static double printConversion(double myResult) {
+        if(myResult < 0) {
+            System.out.println("Invalid value");
+        } else {
+            System.out.println(myResult);
+        }
+    }
+
+}
